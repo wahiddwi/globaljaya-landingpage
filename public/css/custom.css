@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    /* overflow-x: hidden; */
+}
+body {
+    background-color: white;
+}
+
+.navbar {
+    margin-bottom: -15px;
+}
+.navbar-brand {
+    padding-left: 100px;
+    margin-right: -100px;
+}
+.hero img {
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+}
+.hero {
+    display: inline-block;
+}
+.hero .isi {
+    position: absolute;
+    margin-left: 137px;
+}
+.herop img {
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+}
+.herop {
+    display: inline-block;
+}
+.herop .isi {
+    position: absolute;
+    text-align: center;
+    margin-left: 370px;
+    margin-top: 80px;
+}
+.herop .isi p {
+    color: white;
+    font-size: 16px;
+    /* font-weight: 300; */
+    margin-top: 10px;
+}
+.herop .isi h1 {
+    margin-top: 138px;
+    font-size: 55px;
+    font-weight: 700;
+    color: white;
+}
+.hero .isit {
+    text-align: center;
+    position: absolute;
+    margin-left: 350px;
+    margin-top: -50px;
+}
+.hero .isit p {
+    color: white;
+    font-size: 16px;
+    /* font-weight: 300; */
+    margin-top: 10px;
+}
+.hero .isit h1 {
+    margin-top: 180px;
+    font-size: 55px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+}
+.hero .isi p {
+    color: white;
+    font-size: 16px;
+    /* font-weight: 300; */
+    margin-top: 10px;
+}
+.hero .isi h1 {
+    margin-top: 138px;
+    font-size: 55px;
+    font-weight: 700;
+    color: white;
+}
+.nav-item {
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.isi .btn {
+    margin-top: 10px;
+}
+.btn {
+    padding: 10px 80px;
+    border-radius: 15px;
+}
+.mid {
+    margin-top: 400px;
+    /* position: absolute; */
+}
+.mid img {
+    /* position: absolute; */
+    background-size: cover;
+    /* margin-top: 500px; */
+    width: 100%;
+}
+.mid .bg {
+    height: 1000px;
+}
+.mid h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+.mid p {
+    margin-top: 20px;
+    color: #929292;
+}
+.mid p span {
+    display: block;
+}
+.mid .isi {
+    margin-top: -700px;
+    text-align: center;
+}
+.mid .card-img-top {
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.mid .card h4 {
+    color: #3fa1bb;
+    margin-top: 15px;
+    margin-bottom: -10px;
+}
+.mid .card-group {
+    margin-top: 50px;
+    border-radius: 20px;
+}
+.mid .card {
+    padding: 0 20px;
+    border: none;
+    box-shadow: 0px 5px 19px rgba(63, 161, 187, 0.19);
+    margin: 0 15px;
+}
+.mid .card-body {
+    margin-left: 5px;
+}
+.sistem img {
+    position: absolute;
+    margin-top: 120px;
+    background-size: cover;
+}
+.sistem .isi {
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 685px;
+    padding: 0 100px;
+}
+.sistem h1 {
+    font-weight: 700;
+    font-size: 36px;
+}
+.sistem p {
+    color: #929292;
+}
+.produk {
+    margin-top: 100px;
+    /* margin-bottom: 50px; */
+}
+.produk .frame {
+    max-width: 650px;
+}
+.produk .bg {
+    margin-top: 800px;
+    height: 750px;
+    width: 100%;
+}
+.produk .isi {
+    margin-top: -500px;
+    padding: 0 150px;
+    position: absolute;
+}
+.produk .frame {
+    margin-top: -750px;
+    margin-left: 750px;
+}
+.produk h1 {
+    font-weight: 700;
+    font-size: 36px;
+}
+.produk p {
+    color: #929292;
+}
+.visi .frame {
+    max-width: 650px;
+}
+.visi .bg {
+    margin-top: 500px;
+    height: 850px;
+    width: 100%;
+}
+.visi .isi {
+    margin-top: -600px;
+    padding: 0 150px;
+    margin-left: 100px;
+    position: absolute;
+}
+.visi .frame {
+    margin-top: -750px;
+    margin-left: 850px;
+}
+.visi h1 {
+    font-weight: 700;
+    font-size: 36px;
+    color: #3fa1bb;
+}
+.visi p {
+    color: #929292;
+    margin-bottom: 20px;
+}
+.layanan {
+    margin-bottom: 70px;
+}
+.layanan .judul {
+    color: #3fa1bb;
+    font-weight: 700;
+    margin-left: 15px;
+}
+.layanan .card-body h4 {
+    font-weight: 700;
+    /* color: #3fa1bb; */
+}
+.layanan .card-img-top {
+    height: 230px;
+    border-radius: 30px;
+}
+.layanan .card {
+    border-radius: 30px;
+    margin: 10px 0;
+}
+.layanan .card:hover {
+    box-shadow: 0px 5px 19px rgba(63, 161, 187, 0.19);
+    transform: scale(1.05);
+}
+.layanan .card-group {
+    margin-top: 650px;
+}
+.kontak {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.kontak h4 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #3fa1bb;
+}
+.kontak hr {
+    background-color: #e37122;
+    height: 1px;
+    width: 50%;
+}
+.kontak label {
+    color: #929292;
+}
+.kontakkami {
+    margin-bottom: 120px;
+    margin-top: 50px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0px 5px 19px rgba(63, 161, 187, 0.19);
+}
+.img-kontak {
+    margin-top: 90px;
+}
+footer {
+    margin-top: -45px;
+    padding: 10px 0;
+    list-style: none;
+    bottom: 0;
+}
+footer .navigate h4 {
+    margin-left: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #3fa1bb;
+}
+footer .nav-link {
+    font-weight: 500;
+    font-size: 14px;
+    color: #929292;
+}
+footer .copyright {
+    background-size: cover;
+    background-color: #e37122;
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px 0;
+    color: white;
+    font-weight: 400;
+    margin-bottom: -10px;
+}
+footer hr {
+    background-color: #e37122;
+}
+footer .icon .fa {
+    color: white;
+    margin-left: 50px;
+}
+footer .icon {
+    margin-top: 20px;
+    margin-left: 400px;
+    margin-bottom: -30px;
+}
+@media (max-width: 767px) {
+    .navbar-brand {
+        padding-left: 0;
+    }
+    .hero img {
+        min-height: 100%;
+        object-fit: cover;
+        background-size: cover;
+    }
+    .hero .isi {
+        text-align: center;
+        margin-top: 70px;
+        margin-left: 30px;
+    }
+    .hero h1 {
+        font-size: 48px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+    .herop img {
+        min-height: 100%;
+        object-fit: cover;
+        background-size: cover;
+    }
+    .herop .isi {
+        text-align: center;
+        margin-top: 70px;
+        margin-left: 1px;
+    }
+    .herop h1 {
+        font-size: 48px;
+    }
+    .herop p {
+        font-size: 16px;
+    }
+    .hero .isit {
+        text-align: center;
+        margin-top: 70px;
+        margin-left: 10px;
+    }
+    .hero .isit h1 {
+        font-size: 48px;
+    }
+    .hero .isit p {
+        font-size: 16px;
+    }
+    .hero .isit p br {
+        display: none;
+    }
+    .mid .isi {
+        position: absolute;
+        margin-top: 400px;
+        padding: 0 30px;
+    }
+    .mid h1 {
+        font-size: 30px;
+    }
+    .mid p span {
+        display: inline;
+    }
+    .mid .card {
+        margin: 10px 0;
+    }
+    .mid .card-group {
+        margin-top: 600px;
+    }
+    .mid .bg {
+        position: absolute;
+        height: 1700px;
+    }
+    .sistem .isi {
+        margin-top: 230px;
+        text-align: center;
+        margin-left: 0;
+        padding: 0 50px;
+    }
+    .sistem {
+        margin-top: -50px;
+        margin-bottom: -250px;
+    }
+    .sistem img {
+        display: none;
+    }
+    .produk .isi {
+        text-align: center;
+        padding: 0 20px;
+        margin-top: -350px;
+    }
+    .produk .frame {
+        width: 400px;
+        margin-top: -1300px;
+        margin-left: -5px;
+    }
+    .visi {
+        /* margin-bottom: 300px; */
+    }
+    .visi .bg {
+        /* padding-bottom: -1000px; */
+        height: 1200px;
+    }
+    .visi .isi {
+        text-align: center;
+        padding: 0 20px;
+        margin-top: -600px;
+        margin-left: -0px;
+    }
+    .visi .frame {
+        width: 200px;
+        margin-top: -1500px;
+        margin-left: 125px;
+    }
+    .layanan .card-group {
+        margin-top: 800px;
+    }
+    .layanan .card {
+        margin-left: 30px;
+    }
+    footer {
+        text-align: center;
+    }
+    footer li {
+        margin-left: 30px;
+    }
+    footer .navigate {
+        margin-top: 20px;
+    }
+    footer .logo {
+        margin: 0;
+    }
+    .kontak input {
+        width: 400px !important;
+    }
+}
