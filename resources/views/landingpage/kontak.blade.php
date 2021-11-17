@@ -14,7 +14,7 @@
             </div>
             <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Your Message</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" style="height: 100px; width: 500px;">
+            <textarea type="text" class="form-control" style="height: 100px; width: 500px;"></textarea>
             </div>
             <button type="submit" class="btn btn-warning">Submit</button>
         </form>
