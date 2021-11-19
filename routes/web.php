@@ -27,6 +27,7 @@ Route::prefix('admin')
     ->group(function(){
         Route::get('/', 'DashboardController@index')->name('dashboard');
         Route::resource('lokasi', 'LokasiController');
+        Route::resource('produk', 'ProdukController');
     });
 
 Route::get('/home', 'HomeController@index')->name('home');
