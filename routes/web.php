@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,15 @@ Route::get('/', function () {
 Route::view('tentangkami', 'landingpage.tentangkami');
 Route::view('layanan', 'landingpage.layanan');
 Route::view('kontak', 'landingpage.kontak');
+
+//Admin
+Route::prefix('admin')
+    ->namespace('Admin')
+    ->group(function(){
+        Route::get('/', 'DashboardController@index')->name('dashboard');
+        Route::resource('lokasi', 'LokasiController');
+    });
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();

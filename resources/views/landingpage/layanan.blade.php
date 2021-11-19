@@ -73,7 +73,7 @@
                         <h4 class="card-text">Pemasangan Bangunan Prafabrikasi Untuk Gedung</h4>
                     </div>
                 </div>
-            </div>  
+            </div>
             <div class="col">
                 <div class="card" style="width: 360px; height: 330px;">
                     <img src="{{ asset('assets/listrik.jfif') }}" class="card-img-top" alt="..." style="">
@@ -81,7 +81,7 @@
                         <h4 class="card-text">Instalasi Listrik</h4>
                     </div>
                 </div>
-            </div> 
+            </div>
             <div class="col">
                 <div class="card" style="width: 360px; height: 330px;">
                     <img src="{{ asset('assets/plumbing.jfif') }}" class="card-img-top" alt="..." style="">
@@ -105,8 +105,8 @@
                         <h4 class="card-text">Perdagangan Besar Kaca</h4>
                     </div>
                 </div>
-            </div>            
-        </div> 
+            </div>
+        </div>
     </div>
 </div>
 </div>
