@@ -19,7 +19,9 @@ Route::get('/', function () {
 });
 Route::view('tentangkami', 'landingpage.tentangkami');
 Route::view('layanan', 'landingpage.layanan');
-Route::view('kontak', 'landingpage.kontak');
+// Route::view('kontak', 'landingpage.kontak');
+// Route::get('footer', 'LokasiController@index')->name('lokasi');
+Route::resource('kontak', 'KontakController');
 
 //Admin
 Route::prefix('admin')
@@ -28,6 +30,7 @@ Route::prefix('admin')
         Route::get('/', 'DashboardController@index')->name('dashboard');
         Route::resource('lokasi', 'LokasiController');
         Route::resource('produk', 'ProdukController');
+        Route::resource('kontak', 'KontakController');
     });
 
 Route::get('/home', 'HomeController@index')->name('home');
