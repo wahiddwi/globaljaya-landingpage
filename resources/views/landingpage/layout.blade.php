@@ -32,13 +32,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link {{(request()->is('/*')) ? 'active' : ""}}" aria-current="page" href="/">Beranda</a>
+                        <a class="nav-link {{(request()->is('/*')) ? 'active' : ""}}" aria-current="page" href="{{ route('user.dashboard') }}">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{(request()->is('tentangkami*')) ? 'active' : ""}}" href="/tentangkami">Tentang Kami</a>
+                        <a class="nav-link {{(request()->is('tentangkami*')) ? 'active' : ""}}" href="{{ route('user.tentangkami') }}">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{(request()->is('layanan*')) ? 'active' : ""}}" href="/layanan">Layanan</a>
+                        <a class="nav-link {{(request()->is('layanan*')) ? 'active' : ""}}" href="{{ route('user.layanan') }}">Layanan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{(request()->is('kontak*')) ? 'active' : ""}}" href="{{ route('user.kontak.create') }}">Kontak</a>
@@ -72,13 +72,13 @@
                     <div class="navigate col-12 col-md-3">
                         <h4>Navigasi</h4>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Beranda</a>
+                            <a class="nav-link active" aria-current="page" href="{{ route('user.dashboard') }}">Beranda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/tentangkami">Tentang Kami</a>
+                            <a class="nav-link" href="{{ route('user.tentangkami') }}">Tentang Kami</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/layanan">Layanan</a>
+                            <a class="nav-link" href="{{ route('user.layanan') }}">Layanan</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('user.kontak.create') }}">Kontak</a>
@@ -114,7 +114,7 @@
         var mymap = L.map('mapid').setView([-6.205154154013863, 106.84186463929707], 11);
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
                     // maxZoom: 11,
-                attribution: '<a href="{{ route('dashboard') }}">GlobalJaya &copy;</a> contributors ' +
+                attribution: '<a href="{{ route('user.dashboard') }}">GlobalJaya &copy;</a> contributors ' +
                   '',
                 id: 'mapbox/streets-v11',
                 // tileSize: 512,

@@ -22,8 +22,10 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/', 'HomeController@index')->name('home');
 Route::get('/', 'DashboardController@index')->name('user.dashboard');
-Route::view('tentangkami', 'landingpage.tentangkami');
-Route::view('layanan', 'landingpage.layanan');
+Route::get('tentangkami', 'TentangKamiController@index')->name('user.tentangkami');
+Route::get('layanan', 'LayananController@index')->name('user.layanan');
+// Route::view('tentangkami', 'landingpage.tentangkami');
+// Route::view('layanan', 'landingpage.layanan');
 Route::resource('kontak', 'KontakController', [
     'as' => 'user'
 ]);

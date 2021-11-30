@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Kontak;
+use App\Lokasi;
 use Illuminate\Http\Request;
 
 class KontakController extends Controller
@@ -26,7 +27,8 @@ class KontakController extends Controller
     public function create()
     {
         $kontak = Kontak::all();
-        return view('landingpage.kontak', compact('kontak'));
+        $lokasi = Lokasi::all();
+        return view('landingpage.kontak', compact('kontak', 'lokasi'));
     }
 
     /**

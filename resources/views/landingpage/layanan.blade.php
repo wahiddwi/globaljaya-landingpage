@@ -18,7 +18,7 @@
         <div class="card-group mx-auto">
             <div class="row row-cols-1 row-cols-md-3 mx-auto">
 
-            <div class="col">
+            {{-- <div class="col">
                 <div class="card" style="width: 360px; height: 330px;">
                     <img src="{{ asset('assets/dokter.jfif') }}" class="card-img-top" alt="..." style="">
                     <div class="card-body">
@@ -33,24 +33,34 @@
                         <h4 class="card-text">Konstruksi Gedung Kesehatan</h4>
                     </div>
                 </div>
-            </div>
-            <div class="col">
+            </div> --}}
+            {{-- <div class="col">
                 <div class="card" style="width: 360px; height: 330px;">
                     <img src="{{ asset('assets/school.jfif') }}" class="card-img-top" alt="..." style="">
                     <div class="card-body">
                         <h4 class="card-text">Konstruksi Gedung Pendidikan</h4>
                     </div>
                 </div>
-            </div>
+            </div> --}}
+            @foreach ($produk as $item)
             <div class="col">
+                <div class="card" style="width: 360px; height: 330px;">
+                    <img src="{{ Storage::url( $item->image ) }}" class="card-img-top image-thumbnail" alt="..." style=""/>
+                    <div class="card-body">
+                        <h4 class="card-text">{{ $item->title }}</h4>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+            {{-- <div class="col">
                 <div class="card" style="width: 360px; height: 330px;">
                     <img src="{{ asset('assets/hotel.jfif') }}" class="card-img-top" alt="..." style="">
                     <div class="card-body">
                         <h4 class="card-text">Konstruksi Gedung Penginapan</h4>
                     </div>
                 </div>
-            </div>
-            <div class="col">
+            </div> --}}
+            {{-- <div class="col">
                 <div class="card" style="width: 360px; height: 330px;">
                     <img src="{{ asset('assets/gym.jfif') }}" class="card-img-top" alt="..." style="">
                     <div class="card-body">
@@ -105,9 +115,12 @@
                         <h4 class="card-text">Perdagangan Besar Kaca</h4>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
 </div>
+
+{{ $produk->links() }}
+
 @endsection
