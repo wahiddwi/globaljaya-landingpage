@@ -11,7 +11,7 @@
 
     <div class="section-body">
         <div>
-            <a href="{{ route('lokasi.create') }}" class="btn btn-primary fas fa-plus">Tambah Lokasi</a>
+            <a href="{{ route('admin.lokasi.create') }}" class="btn btn-primary fas fa-plus">Tambah Lokasi</a>
         </div>
 
         @if (session('message'))
@@ -46,9 +46,9 @@
                                 <td>{{ $item->alamat }}</td>
                                 <td>{{ $item->no_telpon }}</td>
                                 <td class="text-center">
-                                    <a href="{{ route('lokasi.edit', $item->id) }}" class="btn btn-sm btn-warning fa fa-edit"></a>
+                                    <a href="{{ route('admin.lokasi.edit', $item->id) }}" class="btn btn-sm btn-warning fa fa-edit"></a>
                                     <a href="#" data-id="{{ $item->id }}" class="btn btn-sm btn-danger fas fa-trash swal-confirm">
-                                        <form action="{{ route('lokasi.destroy', $item->id) }}" id="data{{ $item->id }}" method="POST">
+                                        <form action="{{ route('admin.lokasi.destroy', $item->id) }}" id="data{{ $item->id }}" method="POST">
                                         @csrf
                                         @method('delete')
                                         </form>

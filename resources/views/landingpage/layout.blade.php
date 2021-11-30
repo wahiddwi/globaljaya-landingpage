@@ -41,7 +41,7 @@
                         <a class="nav-link {{(request()->is('layanan*')) ? 'active' : ""}}" href="/layanan">Layanan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{(request()->is('kontak*')) ? 'active' : ""}}" href="{{ route('kontak.create') }}">Kontak</a>
+                        <a class="nav-link {{(request()->is('kontak*')) ? 'active' : ""}}" href="{{ route('user.kontak.create') }}">Kontak</a>
                     </li>
                 </ul>
             </div>
@@ -81,7 +81,7 @@
                             <a class="nav-link" href="/layanan">Layanan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('kontak.create') }}">Kontak</a>
+                            <a class="nav-link" href="{{ route('user.kontak.create') }}">Kontak</a>
                         </li>
                     </div>
                     <div class="navigate col-12 col-md-3">
@@ -121,11 +121,21 @@
                 // zoomOffset: -1
               }).addTo(mymap);
                   //marker posisi awal
-          // L.marker([-6.1382687, 106.7428817]).addTo(mymap);
-        var icon = L.icon({
-          iconUrl: '{{ asset('assets/img/hospital_loc.png') }}', //folder icon
-          iconSize: [30, 30], //icon size
-        });
+        //   L.marker([-6.1382687, 106.7428817]).addTo(mymap);
+        // var icon = L.icon({
+        //   iconUrl: '{{ asset('assets/img/hospital_loc.png') }}', //folder icon
+        //   iconSize: [30, 30], //icon size
+        // });
+
+        @foreach ($lokasi as $data)
+  // menampilkan informasi di map
+    var info = '<table><thead><tr><th colspan="2" class="text-center">{{$data->nama}}</th></tr></thead><tbody><tr><td>Alamat</td><td>: {{$data->alamat}}</td></tr><tr><td>No. Telpon</td><td>: {{$data->no_telpon}}</td></tr></tbody></table>';
+    // // menampilkan marker
+    L.marker([<?=$data->latitude?>, <?=$data->longitude?>])
+    .addTo(mymap)
+    // menampilkan popup
+    .bindPopup(info);
+@endforeach
 
         </script>
 

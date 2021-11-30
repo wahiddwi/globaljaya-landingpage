@@ -14,25 +14,37 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landingpage.home');
-});
+// Route::get('/', function () {
+//     return view('landingpage.home');
+// });
+
+// Route::get('/', '')
+
+// Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'DashboardController@index')->name('user.dashboard');
 Route::view('tentangkami', 'landingpage.tentangkami');
 Route::view('layanan', 'landingpage.layanan');
+Route::resource('kontak', 'KontakController', [
+    'as' => 'user'
+]);
 // Route::view('kontak', 'landingpage.kontak');
-// Route::get('footer', 'LokasiController@index')->name('lokasi');
-Route::resource('kontak', 'KontakController');
+// Route::get('lokasi', 'LokasiController@index')->name('lokasi');
 
 //Admin
 Route::prefix('admin')
     ->namespace('Admin')
     ->group(function(){
         Route::get('/', 'DashboardController@index')->name('dashboard');
-        Route::resource('lokasi', 'LokasiController');
-        Route::resource('produk', 'ProdukController');
-        Route::resource('kontak', 'KontakController');
+        Route::resource('lokasi', 'LokasiController', [
+            'as' => 'admin'
+        ]);
+        Route::resource('produk', 'ProdukController', [
+            'as' => 'admin'
+        ]);
+        Route::resource('kontak', 'KontakController', [
+            'as' => 'admin'
+        ]);
     });
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();

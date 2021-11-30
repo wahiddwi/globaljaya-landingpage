@@ -12,7 +12,7 @@ view index produk
 
     <div class="section-body">
         <div>
-            <a href="{{ route('produk.create') }}" class="btn btn-primary fas fa-plus">Tambah Produk</a>
+            <a href="{{ route('admin.produk.create') }}" class="btn btn-primary fas fa-plus">Tambah Produk</a>
         </div>
 
         @if (session('message'))
@@ -50,9 +50,9 @@ view index produk
                                 </td>
                                 {{-- <td>{{ $item->no_telpon }}</td> --}}
                                 <td class="text-center">
-                                    <a href="{{ route('produk.edit', $item->id) }}" class="btn btn-sm btn-warning fa fa-edit"></a>
+                                    <a href="{{ route('admin.produk.edit', $item->id) }}" class="btn btn-sm btn-warning fa fa-edit"></a>
                                     <a href="#" data-id="{{ $item->id }}" class="btn btn-sm btn-danger fas fa-trash swal-confirm">
-                                        <form action="{{ route('produk.destroy', $item->id) }}" id="data{{ $item->id }}" method="POST">
+                                        <form action="{{ route('admin.produk.destroy', $item->id) }}" id="data{{ $item->id }}" method="POST">
                                         @csrf
                                         @method('delete')
                                         </form>

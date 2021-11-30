@@ -19,7 +19,7 @@
         <div class="card">
             <div class="row">
                 <div class="col-12 col-md col-lg-6">
-                    <form action="{{ route('lokasi.store') }}" method="post">
+                    <form action="{{ route('admin.lokasi.store') }}" method="post">
                     @csrf
                     <div class="card-body">
                         <div class="form-group">

@@ -5,7 +5,7 @@
         <div class="img-kontak col-md-5">
             <img src="{{ asset('assets/kontak.svg') }}" alt="" style="width: 100%; height: 350px;">
         </div>
-        <form class="kontak col-md-7" action="{{ route('kontak.store') }}" method="post">
+        <form class="kontak col-md-7" action="{{ route('user.kontak.store') }}" method="post">
             @csrf
             @if (session('message'))
                 <div class="alert alert-success alert-dismissible show-fade">

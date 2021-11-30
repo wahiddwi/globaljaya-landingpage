@@ -5,7 +5,7 @@
 
     <div class="section-body">
         <div class="col-12 col-md col-lg-8">
-            <form action="{{ route('produk.update', $produk->id) }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('admin.produk.update', $produk->id) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('put')
             <div class="form-group">

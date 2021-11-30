@@ -5,7 +5,7 @@
 
     <div class="section-body">
         <div class="col-12 col-md col-lg-8">
-            <form action="{{ route('produk.store') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('admin.produk.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
             <div class="form-group">
                 <label for="title" class="font-weight-bolder">Judul</label>
