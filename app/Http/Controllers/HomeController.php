@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Lokasi;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -11,10 +14,10 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        // $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Show the application dashboard.
@@ -23,6 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('landingpage.home');
+        $lokasi = Lokasi::all();
+        $user = User::all();
+        return view('landingpage.home', compact('lokasi', 'user'));
     }
 }
