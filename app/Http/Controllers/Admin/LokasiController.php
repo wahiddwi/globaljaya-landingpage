@@ -58,7 +58,7 @@ class LokasiController extends Controller
 
         $lokasi->save();
 
-        return redirect()->route('lokasi.index')->with('message', 'Data Berhasil Disimpan');
+        return redirect()->route('admin.lokasi.index')->with('message', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -112,7 +112,7 @@ class LokasiController extends Controller
 
         $lokasi->update();
 
-        return redirect()->route('lokasi.index')->with('message', 'Data Berhasil DIubah');
+        return redirect()->route('admin.lokasi.index')->with('message', 'Data Berhasil DIubah');
     }
 
     /**

@@ -14,6 +14,7 @@ view index produk
         <div>
             <a href="{{ route('admin.produk.create') }}" class="btn btn-primary fas fa-plus">Tambah Produk</a>
         </div>
+        <br>
 
         @if (session('message'))
             <div class="alert alert-success alert-dismissible show-fade">

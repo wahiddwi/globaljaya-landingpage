@@ -13,6 +13,7 @@
         <div>
             <a href="{{ route('admin.lokasi.create') }}" class="btn btn-primary fas fa-plus">Tambah Lokasi</a>
         </div>
+        <br>
 
         @if (session('message'))
             <div class="alert alert-success alert-dismissible show-fade">

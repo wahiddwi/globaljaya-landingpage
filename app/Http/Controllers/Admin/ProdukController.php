@@ -54,7 +54,7 @@ class ProdukController extends Controller
 
         $produk->save();
 
-        return redirect()->route('produk.index')->with('message', 'Data Berhasil Disimpan');
+        return redirect()->route('admin.produk.index')->with('message', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -108,7 +108,7 @@ class ProdukController extends Controller
         );
         $produk->update($data);
 
-        return redirect()->route('produk.index')->with('message', 'Data Berhasil Diubah');
+        return redirect()->route('admin.produk.index')->with('message', 'Data Berhasil Diubah');
     }
 
     /**
@@ -123,6 +123,6 @@ class ProdukController extends Controller
         $image = Storage::disk('local')->delete('public/'.$produk->image);
         $produk->delete();
 
-        return redirect()->route('produk.index')->with('message', 'Data Berhasil Dihapus');
+        return redirect()->route('admin.produk.index')->with('message', 'Data Berhasil Dihapus');
     }
 }
