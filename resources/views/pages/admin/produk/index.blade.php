@@ -1,4 +1,3 @@
-view index produk
 @extends('layouts.app')
 @section('title', 'Produk & Layanan')
 
