@@ -5,7 +5,7 @@
             <img src="{{ asset('assets/banner.png') }}" alt="">
             <div class="isi">
                 <h1>Best Solution<br>For Your Building</h1>
-                <p>Berbekal pengalaman dan sumber daya yangprofesional dan mandiri,<br>kami yakin mampu menjadi solusidalam bidang konstruksi dan pengadaan.</p>
+                <p>Berbekal pengalaman dan sumber daya yang profesional dan mandiri,<br>kami yakin mampu menjadi solusidalam bidang konstruksi dan pengadaan.</p>
                 <a href="#isi" class="btn btn-warning ">Lebih Lanjut</a>
             </div>
         </div>
