@@ -13,4 +13,4 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
-    .copyDirectory('storage/app/public/', 'public/storage/')
+    .copyDirectory('storage/app/public/assets/images', 'public/storage/assets/images')
