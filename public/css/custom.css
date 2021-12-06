@@ -464,10 +464,22 @@ footer .icon {
     footer .logo {
         margin: 0;
     }
+    footer .hub {
+        margin-top: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
     .kontak input {
         width: 400px !important;
     }
     .kontak textarea {
         width: 400px !important;
+    }
+    footer .lokasi {
+        margin-top: 20px;
+    }
+    footer .lokasi .map {
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }

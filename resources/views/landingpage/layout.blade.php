@@ -90,12 +90,12 @@
                             <a class="nav-link" href="#"><i class="fa fa-phone"></i> 02131180063</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-envelope"></i>globaljayautama.gju@gmail.com</a>
+                            <a class="nav-link" href="#"><i class="fa fa-envelope"></i> globaljayautama.gju@gmail.com</a>
                         </li>
                     </div>
                     <div class="lokasi col-12 col-md-3">
                         <h4>Lokasi</h4>
-                        <div id="mapid" style="height: 200px; width: 350px;"></div>
+                        <div class="map" id="mapid" style="height: 200px; width: 350px;"></div>
                     </div>
                 </div>
             </div>
