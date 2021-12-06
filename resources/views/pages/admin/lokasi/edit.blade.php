@@ -49,7 +49,7 @@
                             <div class="form-group col-md-6">
                                 <label for="inputAddress2">Latitude</label>
                                 <input type="text" class="form-control @error('latitude') is-invalid @enderror"
-                                    name="latitude" id="inputAddress2" value="{{ $lokasi->latitude }}" placeholder="Latitude" required>
+                                    name="latitude" id="inputAddress2" value="{{ $lokasi->latitude }}" placeholder="Latitude" required readonly>
                                     @error('latitude')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -60,7 +60,7 @@
                             <div class="form-group col-md-6">
                                 <label for="inputAddress2">Longitude</label>
                                 <input type="text" class="form-control @error('longitude') is-invalid @enderror"
-                                    name="longitude" id="inputAddress2" value="{{ $lokasi->longitude }}" placeholder="Longitude" required>
+                                    name="longitude" id="inputAddress2" value="{{ $lokasi->longitude }}" placeholder="Longitude" required readonly>
                                     @error('longitude')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
