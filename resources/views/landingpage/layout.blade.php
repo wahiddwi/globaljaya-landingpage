@@ -114,7 +114,7 @@
         var mymap = L.map('mapid').setView([-6.205154154013863, 106.84186463929707], 11);
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
                     // maxZoom: 11,
-                attribution: '<a href="{{ route('home') }}">GlobalJaya &copy;</a> contributors ' +
+                attribution: '<a href="@foreach($lokasi as $item)http://maps.google.co.uk/maps?q={{$item->latitude}},{{ $item->longitude }} @endforeach" target="_blank">GlobalJaya &copy;</a> contributors ' +
                   '',
                 id: 'mapbox/streets-v11',
                 // tileSize: 512,
