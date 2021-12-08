@@ -84,18 +84,18 @@
                             <a class="nav-link" href="{{ route('user.kontak.create') }}">Kontak</a>
                         </li>
                     </div>
-                    <div class="navigate col-12 col-md-3">
+                    <div class="hub col-12 col-md-3">
                         <h4>Hubungi Kami</h4>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fa fa-phone"></i> 02131180063</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-envelope"></i>globaljayautama.gju@gmail.com</a>
+                            <a class="nav-link" href="#"><i class="fa fa-envelope"></i> globaljayautama.gju@gmail.com</a>
                         </li>
                     </div>
-                    <div class="navigate col-12 col-md-3">
+                    <div class="lokasi col-12 col-md-3">
                         <h4>Lokasi</h4>
-                        <div id="mapid" style="height: 200px;"></div>
+                        <div class="map" id="mapid" style="height: 200px; width: 350px;"></div>
                     </div>
                 </div>
             </div>
