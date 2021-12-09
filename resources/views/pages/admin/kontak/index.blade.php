@@ -42,7 +42,7 @@ view index produk
                                 <td>{{ $item->message }}</td>
                                 <td class="text-center">
                                     <a href="#" data-id="{{ $item->id }}" class="btn btn-sm btn-danger fas fa-trash swal-confirm">
-                                        <form action="{{ route('kontak.destroy', $item->id) }}" id="data{{ $item->id }}" method="POST">
+                                        <form action="{{ route('admin.kontak.destroy', $item->id) }}" id="data{{ $item->id }}" method="POST">
                                         @csrf
                                         @method('delete')
                                         </form>

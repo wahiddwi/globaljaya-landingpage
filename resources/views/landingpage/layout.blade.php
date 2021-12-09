@@ -84,7 +84,7 @@
                             <a class="nav-link" href="{{ route('user.kontak.create') }}">Kontak</a>
                         </li>
                     </div>
-                    <div class="hub col-12 col-md-3">
+                    {{-- <div class="hub col-12 col-md-3">
                         <h4>Hubungi Kami</h4>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fa fa-phone"></i> 02131180063</a>
@@ -92,7 +92,18 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fa fa-envelope"></i> globaljayautama.gju@gmail.com</a>
                         </li>
+                    </div> --}}
+                    @foreach ($lokasi as $item)
+                     <div class="hub col-12 col-md-3">
+                        <h4>Hubungi Kami</h4>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-phone"></i> {{ $item->no_telpon }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-envelope"></i> {{ $item->email }}</a>
+                        </li>
                     </div>
+                    @endforeach
                     <div class="lokasi col-12 col-md-3">
                         <h4>Lokasi</h4>
                         <div class="map" id="mapid" style="height: 200px; width: 350px;"></div>
@@ -111,7 +122,8 @@
     <script type="text/javascript" src="{{ asset('js/myjs.js') }}"></script>
 
     <script>
-        var mymap = L.map('mapid').setView([@foreach($lokasi as $item){{$item->latitude}},{{ $item->longitude }}@endforeach], 21);
+        // var mymap = L.map('mapid').setView([@foreach($lokasi as $item){{$item->latitude}},{{ $item->longitude }}@endforeach], 21);
+        var mymap = L.map('mapid').setView([@foreach($lokasi as $item){{$item->latitude}},{{ $item->longitude }}@endforeach], 11);
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
                     // maxZoom: 11,
                 attribution: '<a href="@foreach($lokasi as $item)http://maps.google.co.uk/maps?q={{$item->latitude}},{{ $item->longitude }} @endforeach" target="_blank">GlobalJaya &copy;</a> contributors ' +
@@ -129,12 +141,12 @@
 
         @foreach ($lokasi as $data)
   // menampilkan informasi di map
-    var info = '<table><thead><tr><th colspan="2" class="text-center">{{$data->nama}}</th></tr></thead><tbody><tr><td>Alamat</td><td>: {{$data->alamat}}</td></tr><tr><td>No. Telpon</td><td>: {{$data->no_telpon}}</td></tr></tbody></table>';
+    // var info = '<table><thead><tr><th colspan="2" class="text-center">{{$data->nama}}</th></tr></thead><tbody><tr><td>Alamat</td><td>: {{$data->alamat}}</td></tr><tr><td>No. Telpon</td><td>: {{$data->no_telpon}}</td></tr></tbody></table>';
     // // menampilkan marker
     L.marker([<?=$data->latitude?>, <?=$data->longitude?>])
-    .addTo(mymap)
+    .addTo(mymap);
     // menampilkan popup
-    .bindPopup(info);
+    // .bindPopup(info);
 @endforeach
 
         </script>
